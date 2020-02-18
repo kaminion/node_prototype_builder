@@ -8,6 +8,10 @@ app.use("/", express.static("./public"));
 app.use(express.json());
 app.use(express.urlencoded({ extenede: false }));
 
+const adminRouter = require("./api/adm");
+// 라우팅
+app.use("/adm", adminRouter);
+
 
 app.get("/", (req, res) => {
 
