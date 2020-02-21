@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
 
-    res.send("어드민 페이지");
+    res.render("./adm/group/group.pug");
 });
 
 

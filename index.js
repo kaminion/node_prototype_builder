@@ -1,6 +1,6 @@
 ﻿// 실제 entry point
 const http = require('http');
-const app = require('./app');
+const app = require('./app'); // 여기서 실제 서버 불러옴
 const os = require('os');
 const url = require('url');
 
