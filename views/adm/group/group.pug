@@ -1,5 +1,14 @@
 extends ../adm.layout.pug
 
 block content
-    form(class="form-control" method="GET" action="")
-        div(class="")
+    form(method="POST" action="/adm/group")
+        input(type="hidden" name="_method" value="POST")
+        table.table.table-bordered
+            tr
+                td
+                    label.control-label(for="group_title") 게시판 그룹명
+                td
+                    input.form-control(type="text" name="group_title" id="group_title")
+            tr
+        .m-3.text-center
+            button.btn.btn-primary 등록

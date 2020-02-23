@@ -1,6 +1,7 @@
 ﻿// 실제 entry point
+const path = require('path');
 const http = require('http');
-const app = require('./app'); // 여기서 실제 서버 불러옴
+const app = require(path.join(__dirname, '../app.js')); // 여기서 실제 서버 불러옴
 const os = require('os');
 const url = require('url');
 
@@ -25,7 +26,7 @@ server.listen(port, () => {
 
         // 배열 안에서 객체 또 추출
         netWorkinfo[key].forEach((Obj) => {
-
+        
             // 실제 아이피추출 조건문
             if (Obj['family'].toString().indexOf("IPv4") == -1 || Obj['internal'] !== false) return -1;
             homeIp = Obj['address'];
